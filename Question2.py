@@ -6,7 +6,7 @@ def count(input):
             tmp_char = input[n]
             res[tmp_char] = 0
             
-            for i in range(len(input)):
+            for i in range(n, len(input)):
                 if input[i] == tmp_char:
                     res[tmp_char] += 1
             else :
@@ -20,7 +20,7 @@ def group_by_key(input):
     res = {}
     n = 0
     while n < len(input):
-        for i in range(len(input)):
+        for i in range(n, len(input)):
             if input[n]["key"] not in res:
                 tmp_char = input[n]["key"]
                 res[tmp_char] = input[n]["value"]
